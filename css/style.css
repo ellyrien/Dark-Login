@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --BgColor:    #201b2c;
+    --BgCard:     #2f2841;
+    --Greenbase:  #00ff88;
+    --BgInput:    #514869;
+    --TxtInput:   #f0ffffde;
+    --TxtButton:  #2b134b;
+    --Shadow: 0 10px 30px #00000056;
+    --ShadowButton: 0 10px 20px #00ff8052;    
+}
+
+*
+{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body
+{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--BgColor);    
+}
+
+
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+section.left
+{
+    min-width: 50%;
+    /*border: 1px solid #fff;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.left h1
+{
+    /* text-align: center; */
+    font-size: 3rem;
+    color: var(--Greenbase)
+}
+
+section.left img
+{
+    width: 50vw;
+}
+
+section.right
+{
+    min-width: 50%;
+    /*border: 1px solid #fff;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.card-field
+{
+    background-color: var(--BgCard);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.8rem 2.2rem;
+    border: none;  
+    border-radius: 10px;
+    box-shadow: var(--Shadow);
+}
+
+div.card-field h1
+{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--Greenbase);
+}
+
+div.card-field .input-field
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+div.card-field .input-field label
+{
+    color: var(--Greenbase);
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+div.card-field .input-field input
+{
+    background-color: var(--BgInput);
+    width: 100%;
+    color: var(--TxtInput);
+    margin-bottom: 10px;
+    padding: 15px;    
+    border: none;
+    border-radius: 10px;  
+    box-shadow: var(--Shadow); 
+    outline: none; 
+}
+
+div.card-field .input-field input:focus
+{
+    border: 1px solid var(--Greenbase);
+}
+
+button
+{
+   background-color: var(--Greenbase);
+   width: 100%;
+   font-size: 1.2rem;
+   font-weight: 800;
+   color: var(--TxtButton);
+   text-transform: uppercase;
+   margin-top: 1rem;
+   padding: 0.7rem 0;
+   border: none;
+   border-radius: 10px;
+   box-shadow: var(--ShadowButton);
+   outline: none;
+   cursor: pointer;
+}
+
+button:active
+{
+    transform: translateY(2px);
+    letter-spacing: 4px;
+}
+
+@media (max-width: 768px)
+{
+    main
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 3.5rem;
+    }
+
+    section.left,
+    section .right, 
+    section.left img
+    {
+    
+        width: 100%;
+    }
+
+    section.left h1
+    {
+        font-size: 1.5rem;
+    }
+
+    section .card-field
+    {
+        width: 90vw;
+        margin-bottom: 3.5rem;
+    }
+
+}
